@@ -1,0 +1,478 @@
+<html class="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="http://codepen.io/EricAnton/pen/EdyHg?editors=011">
+
+
+    <style class="cp-pen-styles">@font-face {
+        font-family: 'clarendontligregular';
+        src: url('http://ericanton.co/fonts/clarendon/clarendontlig-webfont.eot');
+        src: url('http://ericanton.co/fonts/clarendon/clarendontlig-webfont.eot?#iefix') format('embedded-opentype'), url('http://ericanton.co/fonts/clarendon/clarendontlig-webfont.woff') format('woff'), url('http://ericanton.co/fonts/clarendon/clarendontlig-webfont.ttf') format('truetype'), url('http://ericanton.co/fonts/clarendon/clarendontlig-webfont.svg#clarendontligregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+        background-image: url('http://ericanton.co/patterson/present/img/bg_pattern.jpg');
+        background-repeat: repeat;
+        background-color: #03512a;
+        margin: 50px;
+        padding: 0;
+        font-family: 'clarendontligregular', Georgia, Serif;
+        font-size: large;
+        text-align: center;
+    }
+
+    #box1 {
+        position: relative;
+        width: 375px;
+        cursor: pointer;
+        margin: auto;
+        transition: all 1s;
+        -webkit-transition: all 1s;
+    }
+
+    .box1closed {
+        height: 120px;
+    }
+
+    .box1open {
+        height: 125px;
+    }
+
+    #box-top1 {
+        width: 375px;
+        height: 150px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #box-bottom1 {
+        width: 375px;
+        height: 150px;
+        margin: -40px auto 0 auto;
+        position: relative;
+        z-index: -2;
+        display: block;
+    }
+
+    #box2 {
+        position: relative;
+        width: 375px;
+        top: 50px;
+        cursor: pointer;
+        margin: auto;
+        transition: all 1s;
+        -webkit-transition: all 1s;
+    }
+
+    .box2closed {
+        height: 125px;
+    }
+
+    .box2open {
+        height: 130px;
+    }
+
+    #box-top2 {
+        width: 375px;
+        height: 100px;
+    }
+
+    #box-bottom2 {
+        width: 375px;
+        height: 100px;
+        margin: -25px auto 0 auto;
+        position: relative;
+        z-index: -1;
+        display: block;
+    }
+
+    #box3 {
+        position: relative;
+        width: 375px;
+        top: 50px;
+        cursor: pointer;
+        margin: auto;
+        transition: all 1s;
+        -webkit-transition: all 1s;
+        z-index: 2;
+    }
+
+    .box3closed {
+        height: 90px;
+    }
+
+    .box3open {
+        height: 200px;
+    }
+
+    #box-top3 {
+        width: 375px;
+        height: 70px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #box-bottom3 {
+        width: 375px;
+        height: 70px;
+        margin: auto;
+        position: relative;
+        z-index: 1;
+        display: block;
+    }
+
+    .hideBox {
+        display: none !important;
+    }
+
+    #greeting {
+        color: #fff;
+        overflow: hidden;
+        margin: auto;
+        padding-top: 50px;
+        transition: all 1s;
+        -webkit-transition: all 0.5s;
+        text-shadow: 0px 0px 5px #03512a;
+    }
+
+    .greetingOpen {
+        height: 100px;
+    }
+
+    .greetingClosed {
+        height: 0px;
+    }
+
+    .bounce:hover {
+        animation: bounce 1s infinite;
+        -webkit-animation: bounce 1s infinite;
+        -moz-animation: bounce 1s infinite;
+        -ms-animation: bounce 1s infinite;
+        -o-animation: bounce 1s infinite;
+    }
+
+    .shake {
+        animation: shake 3s infinite;
+        -webkit-animation: shake 3s infinite;
+        -moz-animation: shake 3s infinite;
+        -ms-animation: shake 3s infinite;
+        -o-animation: shake 3s infinite;
+    }
+
+    @keyframes shake {
+        0% {
+            transform: rotate(0deg);
+        }
+        12% {
+            transform: rotate(-10deg);
+        }
+        25% {
+            transform: rotate(10deg);
+        }
+        37% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    @-webkit-keyframes shake {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+        12% {
+            -webkit-transform: rotate(-10deg);
+        }
+        25% {
+            -webkit-transform: rotate(10deg);
+        }
+        37% {
+            -webkit-transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(0deg);
+        }
+    }
+
+    @-moz-keyframes shake {
+        0% {
+            -moz-transform: rotate(0deg);
+        }
+        12% {
+            -moz-transform: rotate(-10deg);
+        }
+        25% {
+            -moz-transform: rotate(10deg);
+        }
+        37% {
+            -moz-transform: rotate(0deg);
+        }
+        100% {
+            -moz-transform: rotate(0deg);
+        }
+    }
+
+    @-ms-keyframes shake {
+        0% {
+            -ms-transform: rotate(0deg);
+        }
+        12% {
+            -ms-transform: rotate(0deg);
+        }
+        25% {
+            -ms-transform: rotate(10deg);
+        }
+        37% {
+            -ms-transform: rotate(0deg);
+        }
+        100% {
+            -ms-transform: rotate(0deg);
+        }
+    }
+
+    @-o-keyframes shake {
+        0% {
+            -o-transform: rotate(0deg);
+        }
+        12% {
+            -o-transform: rotate(0deg);
+        }
+        25% {
+            -o-transform: rotate(10deg);
+        }
+        37% {
+            -o-transform: rotate(0deg);
+        }
+        100% {
+            -o-transform: rotate(0deg);
+        }
+    }
+
+    @keyframes bounce {
+        0% {
+            top: -5px;
+        }
+        12% {
+            top: 5px;
+        }
+        25% {
+            top: -5px;
+        }
+        37% {
+            top: 5px;
+        }
+        50% {
+            top: -5px;
+        }
+        62% {
+            top: 5px;
+        }
+        75% {
+            top: -5px;
+        }
+        87% {
+            top: 5px;
+        }
+        100% {
+            top: -5px;
+        }
+    }
+
+    @-webkit-keyframes bounce {
+        0% {
+            top: -5px;
+        }
+        12% {
+            top: 5px;
+        }
+        25% {
+            top: -5px;
+        }
+        37% {
+            top: 5px;
+        }
+        50% {
+            top: -5px;
+        }
+        62% {
+            top: 5px;
+        }
+        75% {
+            top: -5px;
+        }
+        87% {
+            top: 5px;
+        }
+        100% {
+            top: -5px;
+        }
+    }
+
+    @-moz-keyframes bounce {
+        0% {
+            top: -5px;
+        }
+        12% {
+            top: 5px;
+        }
+        25% {
+            top: -5px;
+        }
+        37% {
+            top: 5px;
+        }
+        50% {
+            top: -5px;
+        }
+        62% {
+            top: 5px;
+        }
+        75% {
+            top: -5px;
+        }
+        87% {
+            top: 5px;
+        }
+        100% {
+            top: -5px;
+        }
+    }
+
+    @-ms-keyframes bounce {
+        0% {
+            top: -5px;
+        }
+        12% {
+            top: 5px;
+        }
+        25% {
+            top: -5px;
+        }
+        37% {
+            top: 5px;
+        }
+        50% {
+            top: -5px;
+        }
+        62% {
+            top: 5px;
+        }
+        75% {
+            top: -5px;
+        }
+        87% {
+            top: 5px;
+        }
+        100% {
+            top: -5px;
+        }
+    }
+
+    @-o-keyframes bounce {
+        0% {
+            top: -5px;
+        }
+        12% {
+            top: 5px;
+        }
+        25% {
+            top: -5px;
+        }
+        37% {
+            top: 5px;
+        }
+        50% {
+            top: -5px;
+        }
+        62% {
+            top: 5px;
+        }
+        75% {
+            top: -5px;
+        }
+        87% {
+            top: 5px;
+        }
+        100% {
+            top: -5px;
+        }
+    }</style></head><body>
+<div id="box1" class="shake bounce box1closed">
+    <img id="box-top1" src="http://ericanton.co/patterson/present/img/box-top.png">
+</div><!-- end #box1 -->
+
+<div id="box2" class="box2closed hideBox">
+    <img id="box-top2" src="http://ericanton.co/patterson/present/img/box-top2.png">
+</div><!-- end #box2 -->
+
+<div id="box3" class="box3closed hideBox">
+    <img id="box-top3" src="http://ericanton.co/patterson/present/img/box-top3.png">
+
+    <div id="greeting" class="greetingClosed">
+        <h1>Merry Christmas to Comtech family!</h1>
+    </div><!-- end #greeting -->
+</div><!-- end #box3 -->
+
+<img id="box-bottom3" class="hideBox" src="http://ericanton.co/patterson/present/img/box-bottom3.png">
+
+<img id="box-bottom2" class="hideBox" src="http://ericanton.co/patterson/present/img/box-bottom2.png">
+
+<img id="box-bottom1" src="http://ericanton.co/patterson/present/img/box-bottom.png">
+<script src="http://assets.codepen.io/assets/common/stopExecutionOnTimeout.js?t=1"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+    $('#box1').click(function () {
+        if ($('#box1').hasClass('box1closed')) {
+            $('#box1').removeClass('box1closed shake bounce').addClass('box1open');
+            $('#box2').removeClass('hideBox');
+            $('#box-top2').addClass('shake bounce');
+            $('#box-bottom2').removeClass('hideBox');
+        } else {
+            $('#box1').removeClass('box1open').addClass('box1closed shake bounce');
+            $('#box2').removeClass('box2open').addClass('box2closed hideBox');
+            $('#box3').removeClass('box3open').addClass('box3closed hideBox');
+            $('#box-top2').removeClass('shake bounce');
+            $('#box-bottom2').addClass('hideBox');
+            $('#box-bottom3').addClass('hideBox');
+            $('#greeting').removeClass('greetingOpen').addClass('greetingClosed');
+            $('body').css({ background: 'bg_pattern.gif' });
+        }
+    });
+    $('#box2').click(function () {
+        if ($('#box2').hasClass('box2closed')) {
+            $('#box2').removeClass('box2closed').addClass('box2open');
+            $('#box3').removeClass('hideBox');
+            $('#box-top2').removeClass('shake bounce');
+            $('#box-top3').addClass('shake bounce');
+            $('#box-bottom3').removeClass('hideBox');
+        } else {
+            $('#box2').removeClass('box2open').addClass('box2closed');
+            $('#box3').removeClass('box3open').addClass('box3closed hideBox');
+            $('#box-top2').addClass('shake bounce');
+            $('#box-bottom3').addClass('hideBox');
+            $('#greeting').removeClass('greetingOpen').addClass('greetingClosed');
+            $('body').css({ background: 'bg_pattern.gif' });
+        }
+    });
+    $('#box3').click(function () {
+        if ($('#box3').hasClass('box3closed')) {
+            $('#box3').removeClass('box3closed').addClass('box3open');
+            $('#box-top3').removeClass('shake bounce');
+            $('#greeting').removeClass('greetingClosed').addClass('greetingOpen');
+            $('body').css({ background: 'output_SXNiPZ.gif' });
+        } else {
+            $('#box3').removeClass('box3open').addClass('box3closed');
+            $('#greeting').removeClass('greetingOpen').addClass('greetingClosed');
+            $('body').css({ background: 'bg_pattern.gif' });
+        }
+    });
+    //# sourceURL=pen.js
+</script>
+<script src="http://codepen.io/assets/editor/live/css_live_reload_init.js"></script>
+</body></html>
