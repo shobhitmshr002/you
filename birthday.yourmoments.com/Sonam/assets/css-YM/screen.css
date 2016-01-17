@@ -562,7 +562,7 @@ Screen media CSS common to all stylesheets.
 
 	.yt-Form-Field-Error
 	{
-		background: url(        '../images/icon_error.gif' ) no-repeat;
+		background: url('../images/icon_error.gif') no-repeat;
 		width: 4px;
 		height: 20px;
 		margin-top: 5px;
@@ -597,7 +597,7 @@ Screen media CSS common to all stylesheets.
 		top: 4px;
 		width: 6px;
 		height: 12px;
-		background: url(        '../images/arrow_formFieldHint.gif' ) no-repeat top left;
+		background: url('../images/arrow_formFieldHint.gif') no-repeat top left;
 	}
 
 	/* hint offset correction for tribute creation step 1 */
@@ -622,7 +622,7 @@ Screen media CSS common to all stylesheets.
 
 	.yt-Form-Field input.yt-Form-Input, .yt-Form-Field input.yt-Form-Input-Short, .yt-Form-Field input.yt-Form-Input-Long, .yt-Form-Field input.yt-Form-Input-XLong
 	{
-		background: url(        '../images/bg_formInput.gif' ) repeat-x top left #fff;
+		background: url('../images/bg_formInput.gif') repeat-x top left #fff;
 		border: 1px solid #d0d0d0;
 		border-top-color: #919191;
 		border-bottom-color: #e4e4e4;
@@ -662,7 +662,7 @@ Screen media CSS common to all stylesheets.
 		font-size: 12px;
 		line-height: 14px;
 		font-family: "Lucida Sans" , "Lucida Sans" , sans-serif;
-		background: url(        '../images/bg_formInput.gif' ) repeat-x top left #fff;
+		background: url('../images/bg_formInput.gif') repeat-x top left #fff;
 		padding: 1px;
 		border: 1px solid #d0d0d0;
 		border-top-color: #919191;
@@ -688,7 +688,7 @@ Screen media CSS common to all stylesheets.
 	/* dropdowns */
 	.yt-Form-Field select
 	{
-		background: url(        '../images/bg_formInput.gif' ) repeat-x top left #fff;
+		background: url('../images/bg_formInput.gif') repeat-x top left #fff;
 		border: 1px solid #d0d0d0;
 		border-top-color: #919191;
 		border-bottom-color: #e4e4e4;
@@ -1148,7 +1148,7 @@ Screen media CSS common to all stylesheets.
 	{
 		position: relative;
 		margin: -44px -11px 0 201px;
-		background: url(        '../images/icon_search.gif' ) no-repeat 10px 8px #70594c;
+		background: url('../images/icon_search.gif') no-repeat 10px 8px #70594c;
 		color: #fff;
 		border-left: solid 1px #3f2921;
 		border-right: solid 1px #3f2921;
@@ -1741,119 +1741,119 @@ Screen media CSS common to all stylesheets.
 
 	li.yt-Tool-BackToEvent a
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -395px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -395px;
 	}
 	li.yt-Tool-EditEvent a
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -416px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -416px;
 	}
 	li.yt-Tool-AddEvent a
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -437px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -437px;
 	}
 
 	li.yt-Tool-AddPhoto a
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -57px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -57px;
 	}
 	li.yt-Tool-EditPhoto a
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -78px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -78px;
 	}
 	li.yt-Tool-BackToPhotos a
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -101px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -101px;
 	}
 
 
 
 	li.yt-Tool-AddNote a
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 3px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 3px;
 	}
 	li.yt-Tool-EditNote a
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -17px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -17px;
 	}
 	li.yt-Tool-BackToNotes a
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -37px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -37px;
 	}
 
 
 	li.yt-Tool-AddVideo a
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -123px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -123px;
 	}
 	li.yt-Tool-EditVideo a
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -144px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -144px;
 	}
 	li.yt-Tool-BackToVideos a
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -166px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -166px;
 	}
 
 	li.yt-Tool-AddAlbum a
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -188px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -188px;
 	}
 	li.yt-Tool-EditAlbum a
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -210px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -210px;
 	}
 
 	li.yt-Tool-EmailPage a
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -230px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -230px;
 	}
 	li.yt-Tools-ViewFullImage a
 	{
 		/*TBD:change Image*/
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -230px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -230px;
 	}
 
 	li.yt-Tool-DownloadAlbum a
 	{
 		/*TBD:change Image*/
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -200px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -200px;
 	}
 	li.yt-Tool-EmailTribute a
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -249px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -249px;
 	}
 	li.yt-Tool-Facebook a
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -268px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -268px;
 	}
 	li.yt-Tool-Favorites a.yt-Tool-AddFavorites-Link
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -287px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -287px;
 	}
 	li.yt-Tool-ManageTribute a
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -309px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -309px;
 	}
 	li.yt-Tool-InviteMoreGuests a
 	{
-		background: #ffffff url(      "../images/inviteIcon.gif" ) no-repeat 0 0;
+		background: #ffffff url("../images/inviteIcon.gif") no-repeat 0 0;
 	}
 	li.yt-Tool-ViewEventGuestList a
 	{
-		background: #ffffff url(      "../images/guestListIcon.gif" ) no-repeat 0 0;
+		background: #ffffff url("../images/guestListIcon.gif") no-repeat 0 0;
 	}
 	li.yt-Tool-ViewSlideshow a
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -373px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -373px;
 	}
 	li.yt-Tool-ChangeTheme a.yt-Tool-ChangeTheme-Link
 	{
-		background: #ffffff url(      "../images/sprite_icons.gif" ) no-repeat 0 -352px;
+		background: #ffffff url("../images/sprite_icons.gif") no-repeat 0 -352px;
 	}
 
 	li.yt-Tool-OutLook a
 	{
-		background: #ffffff url(      "../images/socioIconsOutLook.png" );
+		background: #ffffff url("../images/socioIconsOutLook.png");
 	}
 
 	ul.yt-TypeList li
@@ -3760,7 +3760,7 @@ text-transform:lowercase;
 
 	.yt-smallerFrame
 	{
-		background: url(        "../images/FrameSmall.gif" ) no-repeat scroll 0 0 transparent;
+		background: url("../images/FrameSmall.gif") no-repeat scroll 0 0 transparent;
 		display: block;
 		height: 150px;
 		left: -2px;
@@ -3981,7 +3981,7 @@ text-transform:lowercase;
 		height: 40px !important;
 		position: relative !important;
 		float: left;
-		margin-right: ‚P‚Qpx;
+		margin-right: ï¿½Pï¿½Qpx;
 	}
 	#yt-CCMasterCard label
 	{
@@ -4463,7 +4463,7 @@ text-transform:lowercase;
 		margin: 5px 0;
 		overflow-y: scroll;
 		height: 22em; /* should be a multiple of .yt-AddressList li line-height+top/bottom padding, ie. 2.2em x 10 in this case */
-		background: url(        '../images/bg_formInput.gif' ) repeat-x top left #fff;
+		background: url('../images/bg_formInput.gif') repeat-x top left #fff;
 		border: 1px solid #d0d0d0;
 		border-top-color: #919191;
 		border-bottom-color: #e4e4e4;
@@ -4992,7 +4992,7 @@ text-transform:lowercase;
 		margin-left: 5px;
 		text-transform: uppercase;
 		font-size: 90%;
-		background: url(        '../images/btn_checkAvailability.gif' ) no-repeat top right #f5ede7;
+		background: url('../images/btn_checkAvailability.gif') no-repeat top right #f5ede7;
 		text-decoration: none;
 		display: inline;
 		white-space: nowrap;
@@ -5011,12 +5011,12 @@ text-transform:lowercase;
 	}
 	.availabilityNotice-Loading
 	{
-		background: url(        '../images/icon_loader.gif' ) no-repeat;
+		background: url('../images/icon_loader.gif') no-repeat;
 		padding-left: 22px;
 	}
 	.availabilityNotice-Available
 	{
-		background: url(        '../images/icon_available.gif' ) no-repeat;
+		background: url('../images/icon_available.gif') no-repeat;
 		height: 18px;
 		padding-top: 3px;
 		padding-left: 22px;
@@ -5028,7 +5028,7 @@ text-transform:lowercase;
 	}
 	.availabilityNotice-Unavailable
 	{
-		background: url(        '../images/icon_unavailable.gif' ) no-repeat;
+		background: url('../images/icon_unavailable.gif') no-repeat;
 		padding-left: 22px;
 		padding-bottom: 10px;
 		height: 18px;
@@ -5055,7 +5055,7 @@ text-transform:lowercase;
 		margin-left: 5px;
 		text-transform: uppercase;
 		font-size: 90%;
-		background: url(        '../images/btn_checkAvailability.gif' ) no-repeat top right #f5ede7;
+		background: url('../images/btn_checkAvailability.gif') no-repeat top right #f5ede7;
 		text-decoration: none;
 		display: inline;
 	}
@@ -5073,15 +5073,15 @@ text-transform:lowercase;
 	}
 	.couponNotice-Loading
 	{
-		background: url(        '../images/icon_loader.gif' ) no-repeat;
+		background: url('../images/icon_loader.gif') no-repeat;
 	}
 	.couponNotice-Available
 	{
-		background: url(        '../images/icon_available.gif' ) no-repeat;
+		background: url('../images/icon_available.gif') no-repeat;
 	}
 	.couponNotice-Unavailable
 	{
-		background: url(        '../images/icon_unavailable.gif' ) no-repeat;
+		background: url('../images/icon_unavailable.gif') no-repeat;
 	}
 
 	/* added for tribute creation */
@@ -5097,7 +5097,7 @@ text-transform:lowercase;
 		margin-right: -24px;
 		background-image: none;
 		font-size: 10px;
-		background: url(        '../images/icon_available.gif' ) no-repeat;
+		background: url('../images/icon_available.gif') no-repeat;
 	}
 
 
@@ -5112,7 +5112,7 @@ text-transform:lowercase;
 		margin-right: -24px;
 		background-image: none;
 		font-size: 10px;
-		background: url(        '../images/icon_unavailable.gif' ) no-repeat;
+		background: url('../images/icon_unavailable.gif') no-repeat;
 	}
 
 	/*------------------------------------------------------------
@@ -5543,7 +5543,7 @@ text-transform:lowercase;
 	{
 		position: absolute;
 		padding-top: 8px;
-		background: url(        '../images/bg_homeImageFrame.gif' ) no-repeat top left;
+		background: url('../images/bg_homeImageFrame.gif') no-repeat top left;
 		left: 0;
 		top: 0;
 		margin-left: 137px;
@@ -5660,7 +5660,7 @@ text-transform:lowercase;
 	}
 	.yt-Home ul.yt-NavHome li a
 	{
-		background: url(        '../images/bg_navHome_anniversary.gif' ) no-repeat 0px 0px;
+		background: url('../images/bg_navHome_anniversary.gif') no-repeat 0px 0px;
 		display: block;
 		height: 100%;
 		width: 141px;
@@ -5677,27 +5677,27 @@ text-transform:lowercase;
 
 	.yt-Home ul.yt-NavHome li.yt-Anniversary a
 	{
-		background-image: url(        '../images/bg_navHome_anniversary.gif' );
+		background-image: url('../images/bg_navHome_anniversary.gif');
 	}
 	.yt-Home ul.yt-NavHome li.yt-Memorial a
 	{
-		background-image: url(        '../images/bg_navHome_memorial.gif' );
+		background-image: url('../images/bg_navHome_memorial.gif');
 	}
 	.yt-Home ul.yt-NavHome li.yt-Birthday a
 	{
-		background-image: url(        '../images/bg_navHome_birthday.gif' );
+		background-image: url('../images/bg_navHome_birthday.gif');
 	}
 	.yt-Home ul.yt-NavHome li.yt-Wedding a
 	{
-		background-image: url(        '../images/bg_navHome_wedding.gif' );
+		background-image: url('../images/bg_navHome_wedding.gif');
 	}
 	.yt-Home ul.yt-NavHome li.yt-Graduation a
 	{
-		background-image: url(        '../images/bg_navHome_graduation.gif' );
+		background-image: url('../images/bg_navHome_graduation.gif');
 	}
 	.yt-Home ul.yt-NavHome li.yt-NewBaby a
 	{
-		background-image: url(        '../images/bg_navHome_newBaby.gif' );
+		background-image: url('../images/bg_navHome_newBaby.gif');
 	}
 
 
@@ -5739,7 +5739,7 @@ text-transform:lowercase;
 	}
 	.yt-Home ul.yt-AdditionalOptions li a
 	{
-		background: #8c786c url(        '../images/arrow_412b23.gif' ) no-repeat 5px 15px;
+		background: #8c786c url('../images/arrow_412b23.gif') no-repeat 5px 15px;
 		padding: 10px 10px 10px 20px;
 		color: #fff;
 		font-family: Georgia;
@@ -5750,7 +5750,7 @@ text-transform:lowercase;
 	}
 	.yt-Home ul.yt-AdditionalOptions li a:hover
 	{
-		background-image: url(        '../images/arrow_ffffff.gif' );
+		background-image: url('../images/arrow_ffffff.gif');
 		background-color: #402a22;
 	}
 
@@ -6887,7 +6887,7 @@ a.yt-vt-SaveButton
 .your_tribute
 {
 	border-bottom: 1px dotted #D8C6B9;
-	background: url(        "../images/icon_Bullet-Small.gif" ) left bottom no-repeat;
+	background: url("../images/icon_Bullet-Small.gif") left bottom no-repeat;
 	padding-top: 20px;
 }
 .your_tribute span
@@ -7009,7 +7009,7 @@ html > body .yt-vt-Header
 	float: left;
 	height: 20px;
 	width: 20px;
-	background: url(         '../images/socioIcons.png' ) no-repeat 0 0;
+	background: url('../images/socioIcons.png') no-repeat 0 0;
 }
 
 .yt-vt-shareVideo a.vt-facebook
@@ -7119,7 +7119,7 @@ a.vt-longButtonviewMemorial:hover
 .personaldetail-editmodal
 {
 	border-bottom: 1px dotted #D8C6B9;
-	background: url(        "../images/icon_Bullet-Small.gif" ) left bottom no-repeat;
+	background: url("../images/icon_Bullet-Small.gif") left bottom no-repeat;
 	padding-top: 20px;
 	margin-bottom: 4px;
 }
@@ -7446,14 +7446,14 @@ a.lbtnUpgrade:hover
 
 .divdownloadimg
 {
-	background: #ffffff url('../images/download.png' ) no-repeat;
+	background: #ffffff url('../images/download.png') no-repeat;
 	width: 17px;
 	height: 17px;
 	float: left;
 }
 .divfullsizeimg
 {
-	background: #ffffff url('../images/full size.png' ) no-repeat;
+	background: #ffffff url('../images/full%20size.png') no-repeat;
 	width: 17px;
 	height: 18px;
 	float: left;
@@ -8461,7 +8461,7 @@ a.adModalrightBigButton:hover, a.adModalleftBigButton:hover
 	font-size: 12px;
 	line-height: 14px;
 	font-family: "Lucida Sans" , "Lucida Sans" , sans-serif;
-	background: url(        '../images/bg_formInput.gif' ) repeat-x top left #fff;
+	background: url('../images/bg_formInput.gif') repeat-x top left #fff;
 	padding: 1px;
 	border: 1px solid #d0d0d0;
 	border-top-color: #919191;
@@ -8517,7 +8517,7 @@ a.adModalrightBigButton:hover, a.adModalleftBigButton:hover
 }
 .yt-GuestbookForm-Field input.yt-Form-Input
 {
-	background: url(        '../images/bg_formInput.gif' ) repeat-x top left #fff;
+	background: url('../images/bg_formInput.gif') repeat-x top left #fff;
 	border: 1px solid #d0d0d0;
 	border-top-color: #919191;
 	border-bottom-color: #e4e4e4;

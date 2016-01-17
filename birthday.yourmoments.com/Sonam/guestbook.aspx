@@ -16,13 +16,13 @@ xml:lang="en" lang="en">
     <meta http-equiv="Content-Language" content="en-ca" /><meta http-equiv="imagetoolbar" content="false" /><meta name="robots" content="index,follow" /><meta name="MSSmartTagsPreventParsing" content="true" /><meta id="ctl00_PageDesc" name="description" content="happy birthday" /><link id="ctl00_PageThumb" rel="image_src" href="http://www.yourmoments.com/TributePhotos/Sonam_Birthday/Story/1IMG_20151226_154717_1452113636361.jpeg" /><meta id="ctl00_fbTitle" name="og:title" content="Sonam | Guestbook" /><meta id="ctl00_fbDesc" name="og:description" content="happy birthday" /><meta id="ctl00_fbThumb" name="og:img" content="http://www.yourmoments.com/TributePhotos/Sonam_Birthday/Story/1IMG_20151226_154717_1452113636361.jpeg" />
     <!-- Start - Modification on 31-Dec-09 for the enhancement 9 of the Phase 1 -->
     <!-- default grid layout stylesheet -->
-    <link rel="stylesheet" type="text/css" media="screen, projection" href="../assets/css-YM/layouts/centered1024_21.css" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="assets/css-YM/layouts/centered1024_21.css" />
     <!-- screen elements stylesheet should be here -->
-    <link rel="stylesheet" type="text/css" href="../assets/css-YM/screen.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css-YM/screen.css" />
     <!-- Selected App Theme -->
     <link id="ctl00_idSheet" rel="stylesheet" type="text/css" media="screen, projection" href="http://www.yourmoments.com/assets/themes/Birth_BirthdayDefault_BirthdayDefault/theme.css" />
     <!-- Website Favorite Icon -->
-    <link rel="Shortcut Icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <link rel="Shortcut Icon" type="image/x-icon" href="assets/images/favicon.ico" />
     <!-- JS libraries -->
 
     <script type="text/javascript" src="http://www.yourmoments.com/assets/scripts/swfobject.js"></script>
@@ -665,7 +665,7 @@ xml:lang="en" lang="en">
         <div>
             
 
-<script type="text/javascript" language="javascript" src="../Common/JavaScript/FooterControl.js"></script>
+<script type="text/javascript" language="javascript" src="Common/JavaScript/FooterControl.js"></script>
 
 <div>
     <div class="yt-Footer">

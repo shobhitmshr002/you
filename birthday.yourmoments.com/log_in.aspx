@@ -26,7 +26,7 @@
     <link rel="alternate stylesheet" type="text/css" media="screen, projection" href="../assets/css-YM/large_text.css"
         title="large_text" />
     <!-- Website Favorite Icon -->
-    <link rel="Shortcut Icon" type="image/x-icon" href="assets/images/favicon.ico" />
+    <link rel="Shortcut Icon" type="image/x-icon" href="Sonam/assets/images/favicon.ico" />
     
 
     <script type="text/javascript" src="../assets/scripts/mootools-1.11.js"></script>
