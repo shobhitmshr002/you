@@ -20,13 +20,13 @@ The day I met you was the start of bliss.
 The day is most special day for me and so is you." /><meta id="ctl00_fbThumb" name="og:img" content="http://www.yourmoments.com/TributePhotos/Sonam_Birthday/Story/1IMG_20151226_154717_1452113636361.jpeg" />
     <!-- Start - Modification on 31-Dec-09 for the enhancement 9 of the Phase 1 -->
     <!-- default grid layout stylesheet -->
-    <link rel="stylesheet" type="text/css" media="screen, projection" href="../assets/css-YM/layouts/centered1024_21.css" />
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="assets/css-YM/layouts/centered1024_21.css" />
     <!-- screen elements stylesheet should be here -->
-    <link rel="stylesheet" type="text/css" href="../assets/css-YM/screen.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css-YM/screen.css" />
     <!-- Selected App Theme -->
     <link id="ctl00_idSheet" rel="stylesheet" type="text/css" media="screen, projection" href="http://www.yourmoments.com/assets/themes/Birth_BirthdayDefault_BirthdayDefault/theme.css" />
     <!-- Website Favorite Icon -->
-    <link rel="Shortcut Icon" type="image/x-icon" href="../assets/images/favicon.ico" />
+    <link rel="Shortcut Icon" type="image/x-icon" href="assets/images/favicon.ico" />
     <!-- JS libraries -->
 
     <script type="text/javascript" src="http://www.yourmoments.com/assets/scripts/swfobject.js"></script>
@@ -402,7 +402,7 @@ The day is most special day for me and so is you." /><meta id="ctl00_fbThumb" na
                                 </div>
                                 <div style="margin-top: 10px;" class="yt-messageRemaining">
                                     <div style="float: left; width: 15px; height: 15px;">
-                                        <img src="../assets/images/bbg_TributeLogo.gif" id="ctl00_ModuleContentPlaceHolder_imgYT" alt="TributeLogo" width="15" height="15" />
+                                        <img src="assets/images/bbg_TributeLogo.gif" id="ctl00_ModuleContentPlaceHolder_imgYT" alt="TributeLogo" width="15" height="15" />
                                         </div>
                                     <div style="float: left; margin-left: 5px; width: 200px;">
                                         Logged in as
@@ -581,7 +581,7 @@ The day is most special day for me and so is you." /><meta id="ctl00_fbThumb" na
         <div>
             
 
-<script type="text/javascript" language="javascript" src="../Common/JavaScript/FooterControl.js"></script>
+<script type="text/javascript" language="javascript" src="Common/JavaScript/FooterControl.js"></script>
 
 <div>
     <div class="yt-Footer">
