@@ -1,0 +1,675 @@
+html, body {
+  width:100%;
+  height:100%;
+  padding:0;
+  margin:0;
+  overflow-x:hidden;
+  background-color: #EFCA4A;
+}
+
+/*==============================================================
+    IF MOBILE
+===============================================================*/
+    .warning_mobile_message {
+        display: none;
+        z-index: 99999;
+    }
+    .warning_mobile_message img {
+        width: 100%;
+    }
+
+    @media only screen and (orientation:portrait){
+        #wrapper, footer, section, .sequence, .scroll_home, .chrome_optimized, .skrollable , .audio_on_off{opacity: 0 !important; visibility: hidden;}
+        /*.warning_mobile_message { display: block; } */
+    }
+    @media only screen and (orientation:landscape){
+        /*#qLoverlay, .wrapper, #wrapper, footer, section, .sequence, .scroll_home, .chrome_optimized, .skrollable , .audio_on_off{opacity: 1 !important; visibility: visible}
+        .warning_mobile_message { display: block; }*/
+    }
+
+.nicescroll-rails {
+    z-index: 9999 !important;
+    opacity: 0;
+}
+
+.skrollable {
+  /*
+   * First-level skrollables are positioned relative to window
+   */
+  position:fixed;
+
+  /*
+   * Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable
+   */
+  z-index:100;
+}
+
+.skrollr-mobile .skrollable {
+  position:absolute;
+}
+
+.skrollable .skrollable {
+  /*
+   * Second-level skrollables are positioned relative their parent skrollable
+   */
+  position:absolute;
+}
+
+.skrollable .skrollable .skrollable {
+  /*
+   * Third-level (and below) skrollables are positioned static
+   */
+  position:static;
+  position: inherit;
+}
+
+
+
+.flat_city,
+section.intro .sequence {z-index: 98;}
+
+.palace-ext,
+.exile_king,
+.press_machine,
+.video {z-index: 99;}
+
+.palace,
+.palacio_sky_pan {z-index: 100;}
+
+.multitude,
+.flat_boy,
+.grid  {z-index: 102;}
+
+.ray,
+.spark,
+.cloud_yellow,
+.cloud_top,
+.char { z-index: 200;}
+
+
+
+.shadow {
+  box-shadow: 0 0 100px 0 rgba(0,0,0,0.8);
+  height: 100%;
+}
+
+.scroll_home {  
+    top: 424px;
+    left: 50%;
+    margin-left: -51px;
+    z-index: 150;
+}
+.chrome_optimized {
+    left: 50%;
+    margin-left: -63px;
+    top: 615px;
+    z-index: 9999;
+}
+section.flat_city,
+section.press_machine {
+  overflow: hidden;
+  height: 100%;
+}
+
+.bg {
+    /*background: url("../images/background.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+    height: 300%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+
+
+
+
+#qLoverlay {
+  background: url("../images/bg-loader.jpg") no-repeat scroll top center #EFCA4A;
+  overflow: hidden;
+  z-index: 150 !important;
+}
+#qLpercentage {
+    color: #FFFFFF !important;
+    top: 523px !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+#qLpercentage {
+    background: url("../images/loading.gif") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #FFFFFF !important;
+    height: 133px !important;
+    margin: -100px 0 0 -100px !important;
+    padding: 67px 0 0;
+    top: 498px !important;
+    width: 200px !important;
+}
+
+.wrapper {
+    height: 100%;
+    width: 100%;
+    background-color: #000000;
+}
+section.intro {
+    background: url("../images/bg-intro.jpg") no-repeat scroll center top #EFCA4A;
+    height: 100%;
+    width: 100%;
+}
+
+section.intro h1 {
+    background: url("../images/title-2013_h1.png") no-repeat scroll center top rgba(0, 0, 0, 0);
+    height: 320px;
+    left: 50%;
+    margin: 0 0 0 -480px;
+    position: absolute;
+    text-indent: -9999px;
+    top: 64px;
+    width: 960px;
+}
+section.intro h2 {
+    background: url("../images/title-2013_h2.png") no-repeat scroll center top rgba(0, 0, 0, 0);
+    height: 126px;
+    left: 50%;
+    margin: 0 0 0 -480px;
+    position: absolute;
+    text-indent: -9999px;
+    top: 343px;
+    width: 960px;
+}
+
+
+
+section.intro .leftflat {
+    overflow: hidden;
+    background-color: #F0CA4B;
+    height: 100%;
+    left: 50%;
+    margin: 0 0 0 -961px;
+    position: absolute;
+    width: 961px;
+    z-index: 10;
+}
+/*section.intro .leftflat:after {
+    background: url("../images/black-40.png") repeat-y scroll 0 0 rgba(0, 0, 0, 0);
+    content: " ";
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: 1px;
+    z-index: 10;
+}*/
+section.intro .leftflat span {
+    background: url("../images/gema_flat.png") no-repeat scroll right 485px;
+    height: 100%;
+    left: 0;
+    top: -80px;
+    position: absolute;
+    width: 961px;
+    z-index: 10;
+    padding: 0 0 80px 0;
+}
+
+section.intro .gema {
+    background: url("../images/gema-realism.jpg") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    height: 197px;
+    left: 50%;
+    margin: 0 0 0 -152px;
+    position: absolute;
+    top: 405px;
+    width: 300px;
+}
+
+.wrapper .kingblur {
+    left: 50%;
+    margin: 0 0 0 -960px;
+    top: 0;
+    width: 1920px;
+}
+.wrapper .center1920 {
+    width: 1920px;
+    left: 50%;
+    margin: 0 0 0 -960px;
+}
+/*.wrapper .king,
+.wrapper .kingblur img,*/
+.wrapper .center1920 img {
+  width: 100%
+}
+
+
+.wrapper section.palace .title p { display: none;}
+
+.wrapper section.palace .title {
+    position: relative;
+    z-index: 101;
+}
+.plaque {
+  left: 50%;
+    margin: 0 0 0 -480px;
+    width: 960px;
+    z-index: 999;
+}
+.plaque img {width: 100%;}
+
+.text1 {
+    z-index: 5;
+    top: 100px;
+}
+
+.text2a {}
+
+.textplate {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: block;
+    height: 100%;
+    left: 0 !important;
+    margin: 0 !important;
+    position: fixed !important;
+    width: 100% !important;
+    z-index: 200;
+}
+.text {
+    height: 500px;
+    left: 50%;
+    margin: -250px 0 0 -960px;
+    position: absolute !important;
+    top: 50%;
+    width: 1920px;
+}
+
+.kingblur .column-left {
+    margin: 0 !important;
+    /*width: 578px !important;*/
+}
+
+
+
+.cinta {
+    height: 150px;
+    left: 50%;
+    margin: 0 0 0 -404px;
+    overflow: hidden;
+    position: absolute;
+    top: 484px;
+    width: 812px;
+}
+.cintatransp {
+    background: url("../images/08_press_machine/tapelines.png") repeat-x scroll 0 bottom rgba(0, 0, 0, 0);
+    height: 150px;
+    left: -1380px;
+    position: absolute;
+    width: 2300px;
+}
+
+.cintatransp img {
+    position: absolute;
+    width: auto !important;
+}
+
+.cintatransp img.icon1,
+.cintatransp img.icon1_flat {left: 1180px;}
+
+.cintatransp img.icon2,
+.cintatransp img.icon2_flat {left: 950px;}
+
+.cintatransp img.icon3,
+.cintatransp img.icon3_flat {left: 720px;}
+
+.cintatransp img.icon4,
+.cintatransp img.icon4_flat {left: 490px;}
+
+.cintatransp img.icon5,
+.cintatransp img.icon5_flat {left: 260px;}
+
+.cintatransp img.icon6,
+.cintatransp img.icon6_flat {left: 30px;}
+
+section.versus .hov {
+    display: block;
+    height: 1080px;
+    width: 960px;
+}
+section.versus .choose_character a {
+    display: block;
+    height: 580px;
+    width: 960px;
+    position: absolute;
+    top: 200px;
+    z-index: 100;
+}
+section.versus .realism {
+    background: url("../images/10_versus/bg_realism.jpg") repeat scroll 0 0 transparent;
+    height: 100%;
+}
+section.versus .flat {
+  background-color: #1CB9C5;
+  height: 100%;
+}
+section.versus .choose_character img {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+}
+section.versus .choose_character .hov {
+    background-color: #148790;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+}
+section.versus .choose_character a .loader {
+    display: none;
+    left: 645px;
+    position: absolute;
+    top: 430px;
+    width: 63px;
+}
+section.versus .vs-realism .choose_character a .loader {
+  left: 243px;
+}
+/*section.versus .choose_character .hov {
+  opacity: 1;
+
+  -webkit-transition: all .1s linear;  
+  -moz-transition: all .1s linear;  
+  -o-transition: all .1s linear;  
+  -ms-transition: all .1s linear;  
+  transition: all .1s linear; 
+}*/
+section.versus .realism .hov {
+  background: url("../images/10_versus/black_45.png") repeat scroll 0 0 transparent;
+}
+section.versus .choose_character span {
+    background: url("../images/10_versus/black_45.png") repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 680px;
+    width: 100%;
+    z-index: 2;
+}
+
+
+
+.choose_character .flat-animate,
+.choose_character .flat-anim {
+  background: url("../images/10_versus/sprite-flat435h.png") no-repeat left top;
+  height: 435px;
+  left: 310px;
+  position: absolute;
+  top: 295px;
+  width: 300px;
+  z-index:50;
+  visibility: hidden;
+}
+.choose_character .flat-anim {
+  visibility: visible;
+}
+
+.choose_character .realism-animate,
+.choose_character .realism-anim {
+  background: url("../images/10_versus/sprite-realism435h.png") no-repeat left top;
+  height: 435px;
+  left: 355px;
+  position: absolute;
+  top: 295px;
+  width: 275px;
+  z-index:50;
+  visibility: hidden;
+}
+.choose_character .realism-anim {
+  visibility: visible;
+}
+
+/*section.versus .choose_character img.anim1,
+section.versus .choose_character img.anim2,
+section.versus .choose_character img.anim3,
+section.versus .choose_character img.anim4 {
+  left:0;
+  top: 0;
+  -webkit-transition: all .4s ease;  
+  -moz-transition: all .4s ease;  
+  -o-transition: all .4s ease;  
+  -ms-transition: all .4s ease;  
+  transition: all .4s ease; 
+}*/
+
+/*section.versus div:hover.choose_character img.anim1 { left: 30px;}
+section.versus div:hover.choose_character img.anim2 { left: 60px;}
+
+section.versus div:hover.choose_character img.anim3 { left: -30px;}
+section.versus div:hover.choose_character img.anim4 { left: -60px;}*/
+
+
+
+.vs-shadow {
+    box-shadow: 0 0 50px 0;
+    height: 1080px;
+    z-index: 1;
+}
+
+section.video,
+.sequence > img,
+.sequence > video {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+footer {
+    background: url("../images/intacto_bar.png") no-repeat scroll 0 0 transparent;
+    bottom: 0;
+    height: 129px;
+    left: 50%;
+    margin: 0 0 0 -323px;
+    position: fixed !important;
+    width: 646px;
+    display: block !important;
+  }
+.footer {
+  /*background: url("../images/14_happy_year/intacto_bar2.png") no-repeat scroll 0 0 transparent !important; */
+}
+footer .facebook_like_contenedor {
+    bottom: 24px;
+    position: absolute;
+    right: 150px;
+    width: 85px;
+    z-index: 9;
+  }
+footer .twitter_like_share {
+    bottom: 24px;
+    left: 145px;
+    position: absolute; 
+  z-index: 9;
+  }   
+footer .facebook_like_share {
+    bottom: 24px;
+    left: 25px;
+    overflow: hidden;
+    position: absolute;
+    width: 120px;
+  }
+footer .facebook_like_share iframe {
+    border: medium none;
+    height: 21px;
+    overflow: hidden;
+    position: relative;
+    left: -50px;
+}
+footer .facebook_link,
+footer .twitter_link,
+footer .web_link {
+    background: url("../images/buttons.png") no-repeat scroll 0 0 transparent;
+    bottom: 18px;
+    height: 35px;
+    position: absolute;
+    right: 97px;
+    width: 38px;
+    z-index: 10;
+  }
+
+footer.footer .facebook_link,
+footer.footer .twitter_link,
+footer.footer .web_link {
+  background: url("../images/14_happy_year/buttons2.png") no-repeat scroll 0 0 transparent;
+}
+
+footer .twitter_link,
+footer.footer .twitter_link {
+    background-position: -38px 0;
+    right: 60px;
+
+  }
+footer .web_link,
+footer.footer .web_link {
+    background-position: -76px 0;
+    right: 22px;
+}
+
+footer .facebook_link:hover {background-position: 0 -35px; }
+footer .twitter_link:hover {background-position:-38px -35px;}
+footer .web_link:hover {background-position: -76px -35px;}   
+
+footer .web_intacto_link {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 12px;
+    display: block;
+    height: 89px;
+    position: absolute;
+    right: 271px;
+    width: 112px;
+  } 
+
+footer.footer .web_intacto_link {display: none;}
+
+
+  .canvas_game_img_peloads {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: -999999px;
+      width: 100%;
+      z-index: -1;
+      display: none;
+  }
+  .canvas_container {
+      height: 100%;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: -1;
+  }
+
+.imgvideo img {display: none;}
+
+.video .sequence {
+    background-size: cover;
+}
+.video .sequence.imgvideo img{
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: cover;
+
+}
+
+.sequence object {
+  width: 100%
+}
+
+.want_more_btn {
+    background: url("../images/14_happy_year/more_bt70.png") no-repeat 0 -10px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 150px;
+    padding-top: 5px;
+    height: 100px;
+}
+.want_more_btn:hover {
+    background: url("../images/14_happy_year/more_bt70.png") no-repeat 0 -115px;
+}
+
+.facebook_lens {
+    cursor: pointer;
+    height: 131px;
+    position: absolute;
+    right: 173px;
+    top: 37px;
+    width: 150px;
+    z-index: 50;
+}
+
+.audio_on_off {
+    color: #FFFFFF;
+    cursor: pointer;
+    display: none;
+    font-family: 'Roboto',sans-serif;
+    font-size: 15px;
+    position: fixed;
+    right: 10px;
+    top: 25px;
+    z-index: 999;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
+/*==============================================================
+    SITE OF THE DAY
+===============================================================*/
+.awwwards_nominee {
+    position: fixed;
+    right: 0;
+    top: 120px;
+    z-index: 9999;
+
+    -webkit-transform: translate3d(0px, 0px, 1px);
+}
+.fwa_site_of_the_day {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+
+    -webkit-transform: translate3d(0px, 0px, 1px);
+}
+.webbybadge {
+    position: fixed;
+    left: 25px;
+    bottom: 20px;
+    z-index: 99999;
+
+    -webkit-transform: translate3d(0px, 0px, 1px);
+}
+.csswinner_ribbon {
+    position: fixed;
+    right: 0;
+    bottom: 180px;
+    z-index: 9999;
+
+    -webkit-transform: translate3d(0px, 0px, 1px);
+}.wc3awards {
+    position: fixed;
+    right: 0;
+    bottom: 20px;
+    z-index: 9999;
+
+    -webkit-transform: translate3d(0px, 0px, 1px);
+}
+/*==============================================================
+   OTHERS
+===============================================================*/
+.iot2014LinkBTN {
+    width: 14%;
+    height: 10%;
+    position: fixed;
+    z-index: 99999;
+    top: 50%;
+    left: 50%;
+    margin: 13% 0 0 -7.5%;
+}
