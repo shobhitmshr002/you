@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <script type="text/javascript" src="jquery.min.js"></script>
+
     <style type="text/css">
 
         #stage {
@@ -64,6 +66,7 @@
         }
 
     </style>
+    <script type="text/javascript" src="alphabet.js"></script>
 </head>
 <body>
 <div id="stage">
@@ -78,6 +81,11 @@
         <a href="8.jpg"><img src="images/flowers/images%20(7).jpg" width="140"></a>
     </div>
 </div>
+<div align="center">
+    <canvas id="myCanvas"></canvas>
+</div>
+
+
 <script type="text/javascript">
 
     document.addEventListener("DOMContentLoaded", function() {
@@ -122,6 +130,30 @@
     target.addEventListener("animationend", rotateComplete, false);
     target.addEventListener("MSAnimationEnd", rotateComplete, false);
 
+</script>
+<script type="text/javascript" src="bubbles.js"></script>
+<script type="text/javascript" >
+    var myName = "Hello from skilent";
+
+    var red = [0, 100, 63];
+    var orange = [40, 100, 60];
+    var green = [75, 100, 40];
+    var blue = [196, 77, 55];
+    var purple = [280, 50, 60];
+    var letterColors = [red, orange, green, blue, purple];
+
+    drawName(myName, letterColors);
+
+    if(10 < 3)
+    {
+        bubbleShape = 'square';
+    }
+    else
+    {
+        bubbleShape = 'circle';
+    }
+
+    bounceBubbles();
 </script>
 </body>
 </html>
