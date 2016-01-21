@@ -5,7 +5,7 @@
 var AWS = require('aws-sdk');
 
 AWS.config={
-    accessKeyId: 'AKIAJARV47B2EM4SZMVA', secretAccessKey: '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', region: 'us-west-2'
+    accessKeyId: 'AKIAIMNMLHJY5MXLGH6A', secretAccessKey: '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', region: 'us-west-2'
 }
 AWS.config.apiVersions = {
     ses: '2010-12-01'
@@ -14,10 +14,6 @@ AWS.config.apiVersions = {
 var ses = new AWS.SES();
 var params = {
     Destination: { /* required */
-        BccAddresses: [
-            'shobhitmshr002@gmail.com',
-            /* more items */
-        ],
         CcAddresses: [
             'shobhitmshr002@gmail.com',
             /* more items */
@@ -34,7 +30,7 @@ var params = {
 
             },
             Text: {
-                Data: 'HELLOOOOOOO TEXT' /* required */
+                Data: 'Haapy Birthday' /* required */
 
             }
         },
@@ -46,7 +42,12 @@ var params = {
     Source: 'shobhitmshr002@gmail.com', /* required */
 
 };
+
+var array=[{sub:'',data:''},{sub:'',data:''},{sub:'',data:''}]
 ses.sendEmail(params, function(err, data) {
     if (err) console.log(err, err.stack); // an error occurred
     else     console.log(data);           // successful response
 });
+
+
+//array.splice(0, 1);
