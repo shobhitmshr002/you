@@ -5,6 +5,403 @@
     <title></title>
     <script type="text/javascript" src="jquery.min.js"></script>
 
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        canvas {
+            display: block;
+            position: absolute;
+        }
+        dl{
+            font-family: arial;
+            font-size: 11px;
+            opacity: .999;
+            -webkit-transition: opacity 0.5s ease-in-out 0.5s;
+            -moz-transition: opacity 0.5s ease-in-out 0.5s;
+            transition: opacity 0.5s ease-in-out 0.5s;
+        }
+        dt{
+            clear: left;
+            font-weight: bold;
+            float: left;
+            width: 120px;
+            text-align: right;
+        }
+
+        dd{
+            float: left;
+            margin-left: 10px;
+        }
+
+        .key{
+            background-color: #fff;
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding:10px;
+            width: 330px;
+            height: 98px;
+            -webkit-transition: all 0.5s ease-in-out;
+            -moz-transition: all 0.5s ease-in-out;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .key a{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            height: 16px;
+            line-height: 12px;
+        }
+
+        .key a:hover{
+            font-weight: bold;
+        }
+
+        .key a.open{
+            display: none;
+        }
+
+        .key.hide a.close{
+            display: none;
+        }
+
+        .key.hide a.open{
+            display: block;
+        }
+
+        .key.hide dl{
+            opacity: 0;
+            -webkit-transition: opacity 0.5s ease-in-out;
+            -moz-transition: opacity 0.5s ease-in-out;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .key.hide{
+            width: 18px;
+            height: 16px;
+            -webkit-transition: all 0.5s ease-in-out 0.5s;
+            -moz-transition: all 0.5s ease-in-out 0.5s;
+            transition: all 0.5s ease-in-out 0.5s;
+        }
+    </style>
+    <script type="text/javascript">
+        window.requestAnimFrame = (function(){
+            return  window.requestAnimationFrame       ||
+                    window.webkitRequestAnimationFrame ||
+                    window.mozRequestAnimationFrame    ||
+                    function( callback ){
+                        window.setTimeout(callback, 1000 / 60);
+                    };
+        })();
+
+        (function(window, document, undefined){
+            $(document).ready(function (){
+                init();
+            });
+
+            var can, ctx, origin = {}, particles = [], G=-0.01, frame=0,
+                    dir = ['up', 'left', 'down', 'right'],
+                    mDir={
+                        up: [1, 0, 0, 1],
+                        left: [0, 1, -1, 0],
+                        down: [-1, 0, 0, -1],
+                        right: [0, -1, 1, 0]
+                    },
+                    colDir={
+                        up: function(){
+                            return "rgb("+(255-Math.floor(Math.random()*50))+","+Math.floor(Math.random()*200)+","+Math.floor(Math.random()*50)+")";
+                        },
+                        left: function(){
+                            return "rgb("+(255-Math.floor(Math.random()*50))+","+(255-Math.floor(Math.random()*50))+","+Math.floor(Math.random()*50)+")";
+                        },
+                        down: function(){
+                            return "rgb("+Math.floor(Math.random()*50)+","+Math.floor(Math.random()*200)+","+(255-Math.floor(Math.random()*50))+")";
+                        },
+                        right: function(){
+                            return "rgb("+Math.floor(Math.random()*200)+","+(255-Math.floor(Math.random()*50))+","+Math.floor(Math.random()*50)+")";
+                        }
+                    },
+                    keysDown={
+                        up: false,
+                        left: false,
+                        down: false,
+                        right: false
+                    },
+                    spinSpeed = 3,
+                    bounce = 2,
+                    damping = 0.5,
+                    diminish = 1,
+                    moveSpeed = 6;
+
+            function init(){
+
+                can = document.getElementById('canvas');
+
+                ctx = can.getContext('2d');
+
+                ctx.canvas.width  = window.innerWidth;
+                ctx.canvas.height = window.innerHeight;
+
+                origin.x = ctx.canvas.width/2;
+                origin.y = ctx.canvas.height/2;
+                origin.dX = 0;
+                origin.dY = 0;
+
+                keyListener();
+
+                resizeListener();
+
+                docs();
+
+                renderLoop();
+
+            }
+
+
+
+            function keyListener(){
+                $(window)
+                        .on('keydown', function(e){
+                            var code = e.keyCode || e.which;
+                            if(code === 87){
+                                keysDown.up = true;
+                            }else if(code === 83){
+                                keysDown.down = true;
+                            }else if(code === 65){
+                                keysDown.left = true;
+                            }else if(code === 68){
+                                keysDown.right = true;
+                            }
+                        })
+                        .on('keyup', function(e){
+                            var code = e.keyCode || e.which;
+                            if(code === 87){
+                                keysDown.up = false;
+                            }else if(code === 83){
+                                keysDown.down = false;
+                            }else if(code === 65){
+                                keysDown.left = false;
+                            }else if(code === 68){
+                                keysDown.right = false;
+                            }
+                        })
+                        .on('keypress', function(e){
+                            var code = e.keyCode || e.which;
+                            console.log(code)
+                            if(code === 61){
+                                spinSpeed++;
+                            }else if(code === 45){
+                                spinSpeed--;
+                            }else if(code === 103){
+                                G -= 0.01;
+                            }else if(code === 102){
+                                G += 0.01;
+                            }else if(code === 98){
+                                if(bounce){
+                                    bounce--;
+                                }else{
+                                    bounce = 2;
+                                }
+                            }else if(code === 44){
+                                diminish*=2;
+                            }else if(code === 46){
+                                diminish*=0.5;
+                            }else if(code === 110){
+                                if(damping < 1){
+                                    damping += 0.1;
+                                }
+                            }else if(code === 109){
+                                if(damping > 0){
+                                    damping -= 0.1;
+                                }
+                            }
+
+                        });
+            }
+
+            function resizeListener(){
+                $(window).on('resize', function(){
+                    requestAnimFrame(resize);
+                });
+            }
+            function resize(){
+                ctx.canvas.width  = window.innerWidth;
+                ctx.canvas.height = window.innerHeight;
+            }
+
+            function docs(){
+                var $key = $('.key');
+                $('.close', $key).on('click', function(){
+                    $key.addClass('hide');
+                });
+                $('.open', $key).on('click', function(){
+                    $key.removeClass('hide');
+                });
+
+
+            }
+
+            function cX(m){
+                return m*(Math.random()*0.8 - 0.4);
+            }
+
+            function cY(m){
+                return m*(Math.random() - 3);
+            }
+
+            function d(m1, m2, m3, m4){
+                return cX(m1) * Math.cos( spinSpeed*frame*(2*Math.PI/360) )  +  cY(m2) * Math.sin( spinSpeed*frame*(2*Math.PI/360) ) + cX(m3) * Math.sin( spinSpeed*frame*(2*Math.PI/360) )  +  cY(m4) * Math.cos( spinSpeed*frame*(2*Math.PI/360) );
+            }
+
+            function newParticle(m, col){
+                return {
+                    x: origin.x,
+                    y: origin.y,
+                    w: Math.random()*2 + 1,
+                    dX: d(m[0], m[0], m[1], m[1]),
+                    dY: d(m[2], m[2], m[3], m[3]),
+                    age: 0,
+                    colour: col,
+                    dir: '',
+                    draw: function(){
+                        ctx.beginPath();
+                        ctx.arc(this.x - this.w/2, this.y, this.w, 0, Math.PI*2, true);
+                        ctx.closePath();
+                        ctx.fillStyle = this.colour;
+                        ctx.fill();
+                    }
+                };
+            }
+
+            function renderLoop(){
+                requestAnimFrame(renderLoop);
+                render();
+            }
+
+
+            function render(){
+
+                frame+=1;
+
+                ctx.clearRect(0,0,ctx.canvas.width, ctx.canvas.height);
+
+                originMovement();
+
+
+                catherineWheelDirection();
+
+            }
+
+
+            function originMovement(){
+                if(keysDown.up && keysDown.down){
+                    origin.dY = 0;
+                }else if(keysDown.up){
+                    origin.dY = -moveSpeed;
+                }else if(keysDown.down){
+                    origin.dY = moveSpeed;
+                }else{
+                    origin.dY = 0;
+                }
+                if(keysDown.left && keysDown.right){
+                    origin.dX = 0;
+                }else if(keysDown.left){
+                    origin.dX = -moveSpeed;
+                }else if(keysDown.right){
+                    origin.dX = moveSpeed;
+                }else{
+                    origin.dX = 0;
+                }
+
+                origin.x += origin.dX;
+                origin.y += origin.dY
+
+                switch(bounce){
+                    case 2:
+                        if(origin.y < 0){
+                            origin.y = 0;
+                        }
+                        if(origin.x < 0){
+                            origin.x = 0;
+                        }else if(origin.x > ctx.canvas.width){
+                            origin.x = ctx.canvas.width;
+                        }
+                    case 1:
+                        if(origin.y > ctx.canvas.height){
+                            origin.y = ctx.canvas.height;
+                        }
+                    default:
+
+                        break;
+
+                }
+
+
+            }
+
+            function catherineWheelDirection(){
+                for( var j = 0; j < dir.length; j++){
+                    particles.push(newParticle(mDir[dir[j]], colDir[dir[j]]()));
+                }
+
+                for( var i = 0; i < particles.length; i++){
+                    particles[i].draw();
+
+                    particles[i].dY -= G;
+                    particles[i].y += particles[i].dY;
+                    particles[i].x += particles[i].dX;
+
+
+                    switch(bounce){
+                        case 2:
+                            if(particles[i].y < 0){
+                                particles[i].y = -particles[i].y;
+                                particles[i].dY = -particles[i].dY * damping;
+                            }
+                            var pastX = particles[i].x - ctx.canvas.width;
+                            if(particles[i].x < 0){
+                                particles[i].x = -particles[i].x;
+                                particles[i].dX = -particles[i].dX * damping;
+                            }else if(pastX > 0){
+                                particles[i].x = ctx.canvas.width - pastX;
+                                particles[i].dX = -particles[i].dX * damping;
+                            }
+                        case 1:
+                            var pastY = particles[i].y - ctx.canvas.height;
+                            if(pastY > 0){
+                                particles[i].y = ctx.canvas.height - pastY;
+                                particles[i].dY = -particles[i].dY * damping;
+                            }
+                        default:
+                            break;
+                    }
+
+
+                    particles[i].w *= (1-(particles[i].age/(diminish*1000)));
+
+                    if( particles[i].w < 0.25 ){
+                        particles.splice(i,1);
+                    }
+                    particles[i].age++;
+                }
+            }
+        }(window, document));
+    </script>
+    <!--
+spinner wheel
+-->
+
     <style type="text/css">
 
         #stage {
@@ -68,22 +465,54 @@
     </style>
     <script type="text/javascript" src="alphabet.js"></script>
 </head>
-<body>
+<body style="background-color: black">
 <div id="stage">
     <div id="rotator" style="-webkit-animation-name: rotator;">
+        <a href="1.jpg"><img src="images/img-sonam/IMG-20141223-WA0010.jpg" width="140"></a>
         <a href="1.jpg"><img src="images/flowers/download.jpg" width="140"></a>
-        <a href="2.jpg"><img src="images/flowers/images%20(1).jpg" width="140"></a>
-        <a href="3.jpg"><img src="images/flowers/images%20(2).jpg" width="140"></a>
-        <a href="4.jpg"><img src="images/flowers/images%20(3).jpg" width="140"></a>
-        <a href="5.jpg"><img src="images/flowers/images%20(4).jpg" width="140"></a>
-        <a href="6.jpg"><img src="images/flowers/images%20(5).jpg" width="140"></a>
-        <a href="7.jpg"><img src="images/flowers/images%20(6).jpg" width="140"></a>
-        <a href="8.jpg"><img src="images/flowers/images%20(7).jpg" width="140"></a>
+        <a href="2.jpg"><img src="images/img-sonam/IMG-20150118-WA0002.jpg" width="140"></a>
+        <a href="1.jpg"><img src="images/flowers/images%20(1).jpg" width="140"></a>
+        <a href="3.jpg"><img src="images/img-sonam/IMG-20150118-WA0004.jpg" width="140"></a>
+        <a href="1.jpg"><img src="images/flowers/images%20(2).jpg" width="140"></a>
+        <a href="4.jpg"><img src="images/img-sonam/IMG-20150122-WA0009.jpg" width="140"></a>
+        <a href="1.jpg"><img src="images/flowers/images%20(3).jpg" width="140"></a>
+        <a href="5.jpg"><img src="images/img-sonam/IMG-20150126-WA0018.jpg" width="140"></a>
+        <a href="1.jpg"><img src="images/flowers/images%20(4).jpg" width="140"></a>
+        <a href="6.jpg"><img src="images/img-sonam/IMG_20151225_151334.jpg" width="140"></a>
+        <a href="1.jpg"><img src="images/flowers/images%20(5).jpg" width="140"></a>
+        <a href="7.jpg"><img src="images/img-sonam/IMG_20151225_182946.jpg" width="140"></a>
+        <a href="1.jpg"><img src="images/flowers/images%20(6).jpg" width="140"></a>
+        <a href="8.jpg"><img src="images/img-sonam/IMG_20151226_154044.jpg" width="140"></a>
+        <a href="1.jpg"><img src="images/flowers/images%20(7).jpg" width="140"></a>
+        <a href="8.jpg"><img src="images/img-sonam/IMG_20151226_154717_1452113636361.jpg" width="140"></a>
+        <a href="1.jpg"><img src="images/flowers/images%20(8).jpg" width="140"></a>
+
     </div>
 </div>
+<canvas id="canvas">
+</canvas>
 <div align="center">
     <canvas id="myCanvas"></canvas>
 </div>
+<div class="key">
+    <dl>
+        <dt>a, w, s, d</dt>
+        <dd>Move spinners origin</dd>
+        <dt>+ and - (without shift)</dt>
+        <dd>increase/decrease spin speed</dd>
+        <dt>g and f</dt>
+        <dd>increase/decrease gravity</dd>
+        <dt>b</dt>
+        <dd>toggle bounce mode: none, floor, all walls</dd>
+        <dt>m and n</dt>
+        <dd>increase/decrease bounce damping</dd>
+        <dt>&lt; and &gt; (without shift)</dt>
+        <dd>increase/decrease diminishing speed</dd>
+    </dl>
+    <a href="javascript:void(0);" class="close">&gt;&gt;</a>
+    <a href="javascript:void(0);" class="open">&lt;&lt;</a>
+</div>
+
 
 
 <script type="text/javascript">
