@@ -83,10 +83,10 @@
 #stage2 {
   position: relative;
   margin: 1em 0;
-  width: 544px;
-  height: 320px;
+  width: 1088px;
+  height: 640px;
   box-shadow: inset 0 0 20px #fff;
-  background: url(meadow.jpg) no-repeat;
+  background: url(meadow.jpg) repeat;
   -webkit-perspective: 200px;
   -moz-perspective: 200px;
   -ms-perspective: 200px;
